@@ -1,6 +1,7 @@
 package Vojsko.Soldiers;
 
 
+import Vojsko.Army;
 import Vojsko.Commands;
 
 public class Healer extends Soldier implements Commands {

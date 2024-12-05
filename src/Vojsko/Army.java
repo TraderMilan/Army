@@ -1,6 +1,6 @@
-package Vojsko.Soldiers;
+package Vojsko;
 
-import Vojsko.Commands;
+import Vojsko.Soldiers.*;
 
 import java.util.List;
 

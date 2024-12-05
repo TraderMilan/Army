@@ -1,8 +1,5 @@
 package Vojsko;
 
-import Vojsko.Soldiers.Army;
-import Vojsko.Soldiers.Soldier;
-
 public interface Commands {
 
     default void actionAttack(){

@@ -1,4 +1,4 @@
-import Vojsko.Soldiers.Army;
+import Vojsko.Army;
 import Vojsko.Soldiers.*;
 
 import java.util.ArrayList;

@@ -1,8 +1,10 @@
 package Vojsko.Soldiers;
 
+import Vojsko.Attack;
 import Vojsko.Commands;
+import Vojsko.Defend;
 
-public class Knight extends Soldier implements Commands {
+public class Knight extends Soldier implements Attack, Defend {
 
     public final String type = "ADAPTABLE";
     public int protect;
@@ -14,6 +16,11 @@ public class Knight extends Soldier implements Commands {
         this.damage = damage;
     }
 
+    @Override
+    public void report(Soldier soldier) {
+        super.report(soldier);
+        System.out.println(type);
+    }
 
     @Override
     public void actionAttack() {
@@ -25,8 +32,4 @@ public class Knight extends Soldier implements Commands {
         System.out.println(name + " protects " + protect + " damage | " + "Health left: " + health);
     }
 
-    @Override
-    public void report() {
-        System.out.println(getTitle() + name + getStatus() + "Type - " + type + " | Health: " + health);
-    }
 }

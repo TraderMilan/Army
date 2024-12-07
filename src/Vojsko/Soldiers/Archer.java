@@ -1,8 +1,9 @@
 package Vojsko.Soldiers;
 
 import Vojsko.Commands;
+import Vojsko.Defend;
 
-public class Archer extends Soldier implements Commands {
+public class Archer extends Soldier implements Defend {
 
     public final String type = "DEFENSIVE";
     public int protect;
@@ -12,15 +13,14 @@ public class Archer extends Soldier implements Commands {
         this.protect = protect;
     }
 
-
-
     @Override
     public void actionDefend() {
         System.out.println(name + " protects " + protect + " damage | " + "Health left: " + health );
     }
 
     @Override
-    public void report() {
-        System.out.println(getTitle() + name + getStatus() + "Type - " + type + " | Health: " + health);
+    public void report(Soldier soldier) {
+        super.report(soldier);
+        System.out.println(type);
     }
 }

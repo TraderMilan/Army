@@ -28,43 +28,30 @@ public class Army implements Commands {
         if (x == 1) {
             System.out.println("-----------REPORT-----------");
             for (Soldier soldier : soldiers) {
-                if (soldier instanceof SwordMan) {
-                    ((SwordMan) soldier).report();
-                } else if (soldier instanceof Archer) {
-                    ((Archer) soldier).report();
-                } else if (soldier instanceof Knight) {
-                    ((Knight) soldier).report();
-                } else if (soldier instanceof Healer) {
-                    ((Healer) soldier).report();
-                }
+              soldier.report(soldier);
             }
 
         } else if (x == 2) {
             System.out.println("-----------DEFEND-----------");
             for (Soldier soldier : soldiers) {
-                if (soldier instanceof Archer ) {
-                    ((Archer) soldier).actionDefend();
-                } else if (soldier instanceof Knight) {
-                    ((Knight) soldier).actionDefend();
+                if (soldier instanceof Defend ) {
+                    ((Defend) soldier).actionDefend();
                 }
             }
         } else if (x == 3) {
             System.out.println("-----------ATTACK-----------");
             for (Soldier soldier : soldiers) {
-                if (soldier instanceof SwordMan) {
-                    ((SwordMan) soldier).actionAttack();
-                }else if (soldier instanceof Knight) {
-                    ((Knight) soldier).actionAttack();
+                if (soldier instanceof Attack) {
+                    ((Attack) soldier).actionAttack();
                 }
             }
         }else if (x == 4) {
             System.out.println("-----------HEAL-----------");
             for (Soldier soldier : soldiers){
-                if (soldier instanceof Healer) {
-                    ((Healer) soldier).actionHeals(this);
+                if (soldier instanceof Heal) {
+                    ((Heal) soldier).actionHeals(this);
                 }
             }
-
 
             System.out.println("All soldiers have been successfully healed. ");
         } else {

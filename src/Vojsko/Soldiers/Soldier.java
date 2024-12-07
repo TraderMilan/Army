@@ -1,7 +1,7 @@
 package Vojsko.Soldiers;
 
 
-public class Soldier{
+public abstract class Soldier{
     private final String title = "Soldier ";
     private final String status = " here. ";
 
@@ -26,6 +26,9 @@ public class Soldier{
 
     public void setHealth(int health) {
         this.health = health;
+    }
+    public void report(Soldier soldier) {
+        System.out.print(getTitle() + name + getStatus() + " | Health: " + health + " Type - ");
     }
 }
 

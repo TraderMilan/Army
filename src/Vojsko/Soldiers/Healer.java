@@ -3,8 +3,9 @@ package Vojsko.Soldiers;
 
 import Vojsko.Army;
 import Vojsko.Commands;
+import Vojsko.Heal;
 
-public class Healer extends Soldier implements Commands {
+public class Healer extends Soldier implements Heal {
 
     public final String type = "HEALER";
     public int heal;
@@ -26,9 +27,12 @@ public class Healer extends Soldier implements Commands {
     }
 
     @Override
-    public void report() {
-        System.out.println(getTitle() + name + getStatus() + "Type - " + type + " | Health: " + health);
+    public void report(Soldier soldier) {
+        super.report(soldier);
+        System.out.println(type);
     }
+
+
 }
 
 
